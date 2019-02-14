@@ -41,13 +41,13 @@ class ViewController: UIViewController {
         }
         
         let startButton:UIButton = UIButton()
-        startButton.setTitle("Start", for: UIControlState.normal)
+        startButton.setTitle("Start", for: UIControl.State.normal)
         startView.addSubview(startButton)
         startButton.snp.makeConstraints { (make) in
             make.center.equalTo(startView)
             make.width.height.equalTo(50)
         }
-        startButton.addTarget(self, action: #selector(startHandler), for: UIControlEvents.touchUpInside)
+        startButton.addTarget(self, action: #selector(startHandler), for: UIControl.Event.touchUpInside)
         
         let endView = UIView()
         endView.backgroundColor = UIColor.init(red: 98/255.0, green: 242/255.0, blue: 23/255.0, alpha: 1)
@@ -60,14 +60,14 @@ class ViewController: UIViewController {
         }
         
         let endButton:UIButton = UIButton()
-        endButton.setTitle("End", for: UIControlState.normal)
+        endButton.setTitle("End", for: UIControl.State.normal)
         //        endButton.backgroundColor = UIColor.red
         endView.addSubview(endButton)
         endButton.snp.makeConstraints { (make) in
             make.center.equalTo(endView).offset(0)
             make.width.height.equalTo(50)
         }
-        endButton.addTarget(self, action: #selector(stopHandler), for: UIControlEvents.touchUpInside)
+        endButton.addTarget(self, action: #selector(stopHandler), for: UIControl.Event.touchUpInside)
         
         let resetButton = UIButton()
         self.view.addSubview(resetButton)
@@ -77,8 +77,8 @@ class ViewController: UIViewController {
             make.width.equalTo(100)
             make.height.equalTo(50)
         }
-        resetButton.setTitle("Reset", for: UIControlState.normal)
-        resetButton.addTarget(self, action: #selector(resetHandler), for: UIControlEvents.touchUpInside)
+        resetButton.setTitle("Reset", for: UIControl.State.normal)
+        resetButton.addTarget(self, action: #selector(resetHandler), for: UIControl.Event.touchUpInside)
     }
     
     override func didReceiveMemoryWarning() {
